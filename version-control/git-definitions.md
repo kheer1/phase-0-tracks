@@ -10,3 +10,5 @@ Branch is a temp folder that is a clone of the original. It allows you to makes 
 Saving changes and adding a comment to the changes. You're comment should be discriptive so that you know what changes were made.
 * What is a merge conflict?
 When more then two people make changes to the same file on two different branches and then they both try to merge
+
+I need to practice more with github
