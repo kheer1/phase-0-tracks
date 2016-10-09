@@ -1,0 +1,37 @@
+header {
+  width: 1000px;
+background-color: red;
+display: block;
+border-style: solid;
+}
+
+.column-1 {
+  width: 473px;
+background-color: blue;
+display: inline-block;
+vertical-align: top;
+border-style: solid;
+margin-top: 5px;
+padding: 10px;
+
+}
+
+.column-2 {
+width: 472px;
+background-color: yellow;
+display: inline-block;
+vertical-align: top;
+border-style: solid;
+margin: 5px;
+padding: 10px;
+padding-bottom: 30px;
+
+}
+
+footer {
+  width: 1000px;
+  margin-top: 10px;
+  background-color: green;
+  display: block;
+  border-style: solid;
+}
