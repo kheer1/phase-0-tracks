@@ -1,0 +1,37 @@
+ - Find current floor number on wall.
+
+ -if floor number needed to go to is greater than current floor push up arrow.
+
+	- Once the elevator doors open walk into elevator.
+
+ 	- Locate panel with numerical number buttons.
+
+ 	- Find button that matchs your current floor number by starting at lowest and going up by one, can't be greater then max.
+ 		
+ 		-Go up one floor number, can't be greater than max floor
+ 			
+ 			-If this is the floor you want, select floor
+ 			
+ 				-Once doors open walk out
+ 		
+ 		else start check over from current floor
+
+ - else if floor number needed is less than push down arrow.
+
+ 	- Once the elevator doors open walk into elevator.
+
+ 	- Locate panel with numerical number buttons.
+
+ 	- Find button that matchs your current floor number by starting at lowest and going up by one, can't be greater then max.
+
+ 	-Go down one floor number, can't be less than bottom floor
+
+ 			-If this is the floor you want, select floor
+ 			
+ 				-Once doors open walk out
+
+ 		else start check over from current floor
+
+ - else don't push either button, you're on the correct floor
+
+ 
