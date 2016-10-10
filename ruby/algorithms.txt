@@ -57,15 +57,3 @@ take the two slices of bread and put the sides with peanutbutter and jelly toget
 
 Else you're missing ingredients
 
-
-
-
-
-
-
-
-
-
-Else
-	you don't have items to make sandwich
- 
