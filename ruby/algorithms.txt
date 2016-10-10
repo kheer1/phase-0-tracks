@@ -34,4 +34,38 @@
 
  - else don't push either button, you're on the correct floor
 
+
+How to make a PBJ sandwich
+
+If there is bread and peanutbutter and jelly then you can make sandwich
+
+Take two pieces of bread
+
+take knife and scoop some peanutbutter from jar
+
+spread the peanutbutter evenly on one side of the bread
+
+	if not enough peanutbutter on slice, scope some more and spreed evenly until the entire side is covered evenly 
+
+take knife and scope some jelly
+
+spread the jelly evenly on one side of the bread
+
+	if not enough jelly on slice, scope some more and spreed evenly until the entire side is covered evenly 
+
+take the two slices of bread and put the sides with peanutbutter and jelly together while aligning the edges evenly of the bread
+
+Else you're missing ingredients
+
+
+
+
+
+
+
+
+
+
+Else
+	you don't have items to make sandwich
  
