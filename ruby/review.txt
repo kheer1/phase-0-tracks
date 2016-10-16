@@ -1,0 +1,46 @@
+Variables
+1. What is a variable? Why might a programmer use a variable? 
+A variable is used to store data. So you can manipulate, move, or change the data.
+
+2. If the value of first_name is "Abraham" and last_name is "Lincoln", explain the order in which Ruby will run the line full_name = first_name + last_name, and what the final result will be.
+It would take the value of first name and place it there, and take the value of last name and place it there. Combine the two values, and save it to full name.  “AbrahamLincoln”
+
+Data Types
+3. For each of the following data types, write a short definition and give at least one example of when you might use the data type in a program. (Don't use an example we've already provided.)
+
+string = a ray to store letters and numbers, someones name
+integer = are whole numbers, someones age
+float = are numbers with decimals, devision 
+nil = is a value of nothing, when you want the starting value to be invalid
+boolean = a value of true or false, when you're using an if statement
+Algorithms = series of rules to solve a problem, solving the area of a circle 
+4. What is an algorithm? set of steps
+
+5. What are two common categories of algorithm in computer science?  mathematical and sorting 
+
+Methods
+6. What is a method? Why might a programmer choose to use a method? method is repeatable code. It's used to keep things organized and being able to repeat it without rewriting it.
+
+7. Define the following terms as they relate to a method. 
+
+return value = the value that is returned at the completion of a method to the caller
+side effect = when you're moding the state of the program
+parameter = what's being sent to the method
+argument = what's being recieved/needed by the method 
+implicit return = the last statement is returned in a method if there is no return statement
+
+8. What are global scope and method scope? How do those scopes impact the availability of data at different points in a program?
+global scope can be used anywhere within the program but a method scope can only be used within that method. 
+
+Control Flow
+9. What is control flow? Why might a programmer choose to use flow control?
+ how intrutions are excuted in a certain order. The reason you'd used it is to have some flow and logic to your program.
+
+10. Define the following terms as they relate to flow control.
+
+loop = continues to loop until the end condition is met
+if = only the next statement if the condition is met, and goes through this only ones
+else = if the if statement isn't met, then it automatically does the else statement
+elsif = if the statement isn't met, then it checks the elsif, if the statement is met, than it's excuted
+while = does the the statement while the condition false
+until = does it the statement until the condition becomes true
