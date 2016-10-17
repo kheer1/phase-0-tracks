@@ -1,0 +1,38 @@
+Data Structures
+1. Why are data structures useful in programming?
+They allow you to store large amounts of data
+
+Arrays
+2. Define "array" and describe the characteristics of an array.
+array = [] an array is a list of objects that are similar type like strings or numbers
+
+3. Give two original examples of data sets that an array might be well-suited for.
+	a student's test grades for math
+	a list of movies you have on dvd
+	
+Hashes
+4. Define "hash" and describe the characteristics of a hash.
+
+a hash is a list of items with unique keys and their values.
+
+5. Give two original examples of data sets that a hash might be well-suited for.
+
+your friends names, birthdays, phone numbers 
+movie titles and the actors and actresses in them
+
+Iteration
+6. Why is iteration useful?
+
+It allows you to go through the entire array or hash
+
+7. Give an example of a real-life task that would require iteration if you wrote an algorithm for it.
+
+finding your average grade for a subject if you have an array with your grades for each test and quiz
+if you keep track how much you run everyday in an array, you can use iteration to find the average time you ran
+
+
+Blocks
+8. What is a block?
+small piece of code that is reuseable 
+9. What is a block parameter, and where does its value come from?
+it's the value that you get from using a method, depending what method you use, you'll get a different block parameter value
