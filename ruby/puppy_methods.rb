@@ -26,11 +26,17 @@ class Puppy
 		puts "*sits down*"
 	end
 
+	def initialize
+		puts "Initializing new puppy instance ..."
+	end
+
 end
 
+#drive code
 spot = Puppy.new
 
 spot.fetch("ball")
 spot.speak(3)
 spot.roll_over
-puts spot.dog_years(2)
+puts spot.dog_years(4)
+spot.sit
