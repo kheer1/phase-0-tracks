@@ -77,6 +77,7 @@ class Wordgame
 	end
 
 end #end of class
+	
 
 #user driven data
 game=Wordgame.new
@@ -102,3 +103,5 @@ while game.starting_word.length > game.guess_count && !game.game_status
 end
 
 game.setwinlosemessage
+
+
