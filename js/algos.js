@@ -43,7 +43,44 @@ function shareOneKeyValuePair (firstObject, secondObject)
 	}
 	return shareValue;
 }
+/*Write a function that takes an integer for length, and builds and returns an array of strings of the given length. 
+setup a for loop that takes a number and uses it for the length, this will give you the length of the array
+then randomly generate a number between 1 and 10, this will give you the length of each string
+randomly generate a random letter, store that letter and keep adding until you've hit your random length for that string
+add the completed word to the array
+after the array is full, return the array
+then send the array to your longest string in an array funtion to see what word was the longest
+do that ten times.
+*/
+function buildRandomArray(number)
+{
+	var varyingLength = 0;
+	var randomWordArray = [];
+	var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 
+	for (var x = 0; x < number; x++) 
+	{
+		varyingLength = Math.floor(Math.random() * 10) + 1;
+		text = "";
+		for (var y = 0; y < varyingLength; y++) 
+		{
+			text += possible.charAt(Math.floor(Math.random() * possible.length));
+		}
+		randomWordArray[x] = text;
+	}
+    return randomWordArray;
+}
+
+var tempArray = [];
+
+for (var i = 0; i < 10; i++) 
+{
+	tempArray = buildRandomArray(Math.floor(Math.random() * 10) + 5);
+	console.log(tempArray);
+	console.log("The longest string within the array is:"+findLongestString(tempArray));
+	console.log("\n");
+}
 
 console.log("The longest string within the array is:"+findLongestString(longestStrings));
 
