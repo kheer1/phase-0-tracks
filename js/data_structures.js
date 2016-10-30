@@ -73,6 +73,6 @@ console.log("The model of your car is:" + firstCar.model, "with a color of:" + f
 firstCar.engine(true);
 
 console.log("----\n\n");
-var firstCar = new Car("Saab", "Blue", 120);
+var secondCar = new Car("Saab", "Blue", 120);
 console.log("The model of your car is:" + firstCar.model, "with a color of:" + firstCar.color, "and a top speed of:" + firstCar.topSpeed);
 firstCar.engine(false);
