@@ -90,7 +90,10 @@ end #end of class
 
 #Getting virus data for every state, it's outside of the class because you already have all the methods needed to find data for every state
 #If it was inside, then you'd have a method that might never be called
-STATE_DATA.each_key {|key| VirusPredictor.new(key, STATE_DATA[key][:population_density], STATE_DATA[key][:population]).virus_effects}
+STATE_DATA.each_key { |key| VirusPredictor.new(key, STATE_DATA[key][:population_density], STATE_DATA[key][:population]).virus_effects }
+#Or
+STATE_DATA.each { |key, value| VirusPredictor.new(key, value[:population_density], value[:population]).virus_effects }
+
 #=======================================================================
 # Reflection Section
 =begin
