@@ -1,0 +1,56 @@
+sqlite> sqlite> SELECT * FROM users, businesses, reviews WHERE (reviews.business_id=businesses.id AND reviews.user_id=users.id);
+id          first_name  last_name   id          name        id          stars       comment                                 business_id  user_id
+----------  ----------  ----------  ----------  ----------  ----------  ----------  --------------------------------------  -----------  ----------
+2           greg        tropino     1           Denny's     1           5           Where price and quality come together!  1            2
+1           kam         heer        2           IHOP        2           2           Cheap Food, wouldn't go back!           2            1
+1           kam         heer        4           Soylent     3           1           Tasted like crap!!!                     4            1
+3           paru        shah        3           Pizza Hut   4           4           Great food at a great price             3            3
+1           kam         heer        2           IHOP        5           3           Service could have been better          2            1
+2           greg        tropino     3           Pizza Hut   6           2           Meh                                     3            2
+2           greg        tropino     4           Soylent     7           5           BEST PLACE EVER                         4            2
+3           paru        shah        1           Denny's     8           4           Great breakfast                         1            3
+2           greg        tropino     2           IHOP        9           5           Favorite place of all time!             2            2
+
+sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.stars, reviews.comment FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON  reviews.user_id = users.id;
+first_name  last_name   name        stars       comment
+----------  ----------  ----------  ----------  --------------------------------------
+greg        tropino     Denny's     5           Where price and quality come together!
+kam         heer        IHOP        2           Cheap Food, wouldn't go back!
+kam         heer        Soylent     1           Tasted like crap!!!
+paru        shah        Pizza Hut   4           Great food at a great price
+kam         heer        IHOP        3           Service could have been better
+greg        tropino     Pizza Hut   2           Meh
+greg        tropino     Soylent     5           BEST PLACE EVER
+paru        shah        Denny's     4           Great breakfast
+greg        tropino     IHOP        5           Favorite place of all time!
+
+
+sqlite> sqlite> SELECT users.first_name, users.last_name, businesses.name, reviews.starws.comment FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON  reviews.user_id = users.id WHERE businesses.name="Soylent";
+first_name  last_name   name        stars       comment
+----------  ----------  ----------  ----------  -------------------
+kam         heer        Soylent     1           Tasted like crap!!!
+greg        tropino     Soylent     5           BEST PLACE EVER
+
+
+
+Testing other Joins
+
+sqlite> SELECT users.first_name, reviews.stars, businesses.name FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON  reviews.user_id = users.id;
+first_name  stars       name
+----------  ----------  ----------
+greg        5           Denny's
+kam         2           IHOP
+kam         1           Soylent
+paru        4           Pizza Hut
+kam         3           IHOP
+greg        2           Pizza Hut
+greg        5           Soylent
+paru        4           Denny's
+greg        5           IHOP
+
+sqlite> SELECT users.first_name, reviews.stars, businesses.name FROM reviews JOIN businesses ON reviews.business_id = businesses.id JOIN users ON  reviews.user_id = users.id WHERE reviews.stars=5;
+first_name  stars       name
+----------  ----------  ----------
+greg        5           Denny's
+greg        5           Soylent
+greg        5           IHOP
