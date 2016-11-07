@@ -1,0 +1,87 @@
+sqlite> .header on
+sqlite> .mode column
+sqlite> SELECT * FROM usedcars;
+id          name        miles       sold        manufacturer_id
+----------  ----------  ----------  ----------  ---------------
+1           Camery      23000       false       1
+2           3series     14000       true        2
+3           Accord      4000        true        3
+4           Corolla     8           false       1
+5           Highlander  58          false       1
+6           X5          557         false       2
+7           Polit       600         false       3
+
+sqlite> UPDATE usedcars SET sold="true" WHERE id=5;
+sqlite> SELECT * FROM usedcars;
+id          name        miles       sold        manufacturer_id
+----------  ----------  ----------  ----------  ---------------
+1           Camery      23000       false       1
+2           3series     14000       true        2
+3           Accord      4000        true        3
+4           Corolla     8           false       1
+5           Highlander  58          true        1
+6           X5          557         false       2
+7           Polit       600         false       3
+
+sqlite> SELECT * FROM usedcars, manufacturer WHERE usedcars.manufacturer_id=manufacturer.id;
+id          name        miles       sold        manufacturer_id  id          name
+----------  ----------  ----------  ----------  ---------------  ----------  ----------
+1           Camery      23000       false       1                1           TOYOTA
+2           3series     14000       true        2                2           BMW
+3           Accord      4000        true        3                3           HONDA
+4           Corolla     8           false       1                1           TOYOTA
+5           Highlander  58          true        1                1           TOYOTA
+6           X5          557         false       2                2           BMW
+7           Polit       600         false       3                3           HONDA
+
+sqlite> SELECT usedcars.name, manufacturer.name FROM usedcars JOIN manufacturer ON manufacturer_id=manufacturer.id;
+name        name
+----------  ----------
+Camery      TOYOTA
+3series     BMW
+Accord      HONDA
+Corolla     TOYOTA
+Highlander  TOYOTA
+X5          BMW
+Polit       HONDA
+
+sqlite> SELECT usedcars.name, manufacturer.name FROM usedcars JOIN manufacturer ON manufacturer_id=manufacturer.id WHERE sold="true";
+name        name
+----------  ----------
+3series     BMW
+Accord      HONDA
+Highlander  TOYOTA
+
+sqlite> DELETE FROM usedcars WHERE name="X5";
+sqlite> SELECT * FROM usedcars;
+id          name        miles       sold        manufacturer_id
+----------  ----------  ----------  ----------  ---------------
+1           Camery      23000       false       1
+2           3series     14000       true        2
+3           Accord      4000        true        3
+4           Corolla     8           false       1
+5           Highlander  58          true        1
+7           Polit       600         false       3
+
+
+
+sqlite> SELECT usedcars.name, manufacturer.name FROM usedcars LEFT JOIN manufacturer ON manufacturer_id=manufacturer.id;
+name        name
+----------  ----------
+Camery      TOYOTA
+3series     BMW
+Accord      HONDA
+Corolla     TOYOTA
+Highlander  TOYOTA
+Polit       HONDA
+Civic       HONDA
+Roque
+
+
+
+sqlite> SELECT usedcars.name, manufacturer.name FROM usedcars JOIN manufacturer ON manufacturer_id=manufacturer.id WHERE usedcars.sold="true";
+name        name
+----------  ----------
+3series     BMW
+Accord      HONDA
+Highlander  TOYOTA
