@@ -24,4 +24,5 @@ post '/students' do
   redirect '/'
 end
 
+
 # add static resources
