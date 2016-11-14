@@ -1,0 +1,16 @@
+body {
+  background-color: gray;
+}
+
+ul {
+  border: 1px solid black;
+  background-color: purple;
+  position: static;
+  margin-bottom: 50px;
+}
+
+ol {
+  border: 1px solid black;
+  background-color: blue;
+  position: static;
+}
